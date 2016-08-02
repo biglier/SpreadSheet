@@ -48,13 +48,14 @@ namespace SpreadSheet
                 else
                 {
                     last = dataGridViewTable.Columns[dataGridViewTable.ColumnCount-1].Name[0];
+                    if (last == 'I') { return; }
                     last++; 
                 }
                 columns = GetAlphabeticalArray();
                 for (int i = 0; i < columns.Count; i++)
                 {
                     columns[i] = last + columns[i];
-                }
+                } 
                 lastElement = dataGridViewTable.ColumnCount;
             }
             dataGridViewTable.ColumnCount = dataGridViewTable.ColumnCount + columns.Count;
