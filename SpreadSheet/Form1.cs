@@ -13,16 +13,11 @@ namespace SpreadSheet
 {
     public partial class Form1 : Form
     {
-        List<string> Columns = new List<string>();
 
         public Form1()
         {
             InitializeComponent();
-            Thread ColumsThread = new Thread(CreateColums);
-            ColumsThread.Start();
-            dataGridViewTable.ColumnCount = 26;
-            AddingColumns(Columns);
-
+            CreateColums();
         }
 
         private void dataGridViewTable_CellLeave(object sender, DataGridViewCellEventArgs e)
@@ -37,25 +32,35 @@ namespace SpreadSheet
 
         private void CreateColums()
         {
-            if (Columns.Count < 1)
+            int lastElement=0;
+            List<string> columns = new List<string>();
+            if (dataGridViewTable.ColumnCount < 1)
             {
-                Columns.AddRange(GetAlphabeticalArray());
+                columns.AddRange(GetAlphabeticalArray());
             }
             else
             {
-                if (Columns.Count > 26)
+                char last;
+                if (dataGridViewTable.ColumnCount == 26)
                 {
-
+                    last = dataGridViewTable.Columns[0].Name[0];
                 }
                 else
                 {
-                    string last = Columns[Columns.Count-1];
-                    var array = GetAlphabeticalArray();
-                    for(int i=0 ; i < array.Count; i++)
-                    {
-                        array[i] = last + array[i];
-                    }
+                    last = dataGridViewTable.Columns[dataGridViewTable.ColumnCount-1].Name[0];
+                    last++; 
                 }
+                columns = GetAlphabeticalArray();
+                for (int i = 0; i < columns.Count; i++)
+                {
+                    columns[i] = last + columns[i];
+                }
+                lastElement = dataGridViewTable.ColumnCount;
+            }
+            dataGridViewTable.ColumnCount = dataGridViewTable.ColumnCount + columns.Count;
+            for (int i = 0; i < columns.Count; i++)
+            {
+                dataGridViewTable.Columns[lastElement+i].Name = columns[i];
             }
         }
 
@@ -71,11 +76,12 @@ namespace SpreadSheet
 
         private void AddingColumns(List<string> columnsNames)
         {
-            for(int i=0; i<columnsNames.Count; i++)
-            {
-                dataGridViewTable.Columns[i].Name = columnsNames[i];
-            }
-            
+     
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CreateColums();
         }
     }
 }
