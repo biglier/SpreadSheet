@@ -1,0 +1,9 @@
+c:\users\slavik\documents\visual studio 2015\Projects\SpreadSheet\SpreadSheet\bin\Debug\SpreadSheet.exe.config
+C:\Users\Slavik\Documents\Visual Studio 2015\Projects\SpreadSheet\SpreadSheet\bin\Debug\SpreadSheet.exe
+C:\Users\Slavik\Documents\Visual Studio 2015\Projects\SpreadSheet\SpreadSheet\bin\Debug\SpreadSheet.pdb
+C:\Users\Slavik\Documents\Visual Studio 2015\Projects\SpreadSheet\SpreadSheet\obj\Debug\SpreadSheet.csprojResolveAssemblyReference.cache
+C:\Users\Slavik\Documents\Visual Studio 2015\Projects\SpreadSheet\SpreadSheet\obj\Debug\SpreadSheet.Form1.resources
+C:\Users\Slavik\Documents\Visual Studio 2015\Projects\SpreadSheet\SpreadSheet\obj\Debug\SpreadSheet.Properties.Resources.resources
+C:\Users\Slavik\Documents\Visual Studio 2015\Projects\SpreadSheet\SpreadSheet\obj\Debug\SpreadSheet.csproj.GenerateResource.Cache
+C:\Users\Slavik\Documents\Visual Studio 2015\Projects\SpreadSheet\SpreadSheet\obj\Debug\SpreadSheet.exe
+C:\Users\Slavik\Documents\Visual Studio 2015\Projects\SpreadSheet\SpreadSheet\obj\Debug\SpreadSheet.pdb
